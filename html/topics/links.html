@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Links</title>
+
+        <style>
+            a:link    {color:green; background-color:transparent; text-decoration:none}
+            a:visited {color:pink; background-color:transparent; text-decoration:none}
+            a:hover   {color:red; background-color:transparent; text-decoration:underline}
+            a:active  {color:yellow; background-color:transparent; text-decoration:underline}
+
+            #bottom-div {
+                margin-top: 1000px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <p>
+            <a href="#bottom-div" target="_self">Bottom div (target _self - default)</a>
+        </p>
+
+        <p>
+            <a href="#bottom-div" target="_blank">Bottom div (target _blank)</a>
+        </p>
+
+        <div id="bottom-div">
+            Hey! I'm div from the bottom.
+        </div>
+
+
+    </body>
+</html>
