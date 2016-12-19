@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Images</title>
+        <style>
+            div img {
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h3>width and height:</h3>
+        <div>
+            <p>style attribute has higher precedence than &lt;style&gt; from head</p>
+            <img src="../../images/html5.png" alt="HTML5 Icon" style="width:100px; height:100px;">
+
+            <br>
+
+            <p>width and height attributes have lower precedence than &lt;style&gt; from head</p>
+            <img src="../../images/html5.png" alt="HTML5 Icon" width="100" height="100">
+        </div>
+
+        <h3>floating:</h3>
+        <p>
+            <img src="../../images/html5.png" alt="Smiley face" style="float:right;width:42px;height:42px;">
+            The image will float to the right of the text.
+        </p>
+
+        <p>
+            <img src="../../images/html5.png" alt="Smiley face" style="float:left;width:42px;height:42px;">
+            The image will float to the left of the text.
+        </p>
+
+        <br>
+
+        <h3>'usemap' attribute:</h3>
+
+        <img src="../../images/shapes.png" usemap="shapes-map">
+
+        <map name="shapes-map">
+            <area shape="rect" title="Square" coords="19,28,222,228" href="#"/>
+            <area shape="circle" title="Circle" coords="361,132,96" href="#"/>
+        </map>
+
+    </body>
+</html>
