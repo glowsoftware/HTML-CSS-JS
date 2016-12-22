@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lists</title>
+        <style>
+            table, th, td {
+               border: 1px solid black;
+               border-collapse: collapse;
+               padding: 10px;
+            }
+
+            .menu {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333333;
+            }
+
+            .menu li {
+                display: inline-block;
+                <!-- Alternative: float: left; -->
+            }
+
+            .menu li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 16px;
+                text-decoration: none;
+            }
+
+            .menu li a:hover {
+                background-color: #111111;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h2>Unordered Lists</h2>
+
+        <table>
+            <tr>
+                <th>list-style-type</th>
+                <th>example</th>
+            </tr>
+
+            <tr>
+                <td>disc</td>
+                <td>
+                    <ul style="list-style-type:disc">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td>circle</td>
+                <td>
+                    <ul style="list-style-type:circle">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td>square</td>
+                <td>
+                    <ul style="list-style-type:square">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td>none</td>
+                <td>
+                    <ul style="list-style-type:none">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <h2>Ordered Lists</h2>
+
+        <table>
+            <tr>
+                <th>type</th>
+                <th>example</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>
+                    <ol type="1">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ol>
+                </td>
+            </tr>
+
+            <tr>
+                <td>A</td>
+                <td>
+                    <ol type="A">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ol>
+                </td>
+            </tr>
+
+            <tr>
+                <td>a</td>
+                <td>
+                    <ol type="a">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ol>
+                </td>
+            </tr>
+
+            <tr>
+                <td>I</td>
+                <td>
+                    <ol type="I">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ol>
+                </td>
+            </tr>
+
+            <tr>
+                <td>i</td>
+                <td>
+                    <ol type="i">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <h2>Description Lists</h2>
+
+        <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+
+        <br>
+
+        <h2>Nested Lists</h2>
+
+        <ul>
+            <li>Level 1</li>
+            <li>Level 1
+                <ul>
+                    <li>Level 2</li>
+                    <li>Level 2
+                        <ul>
+                            <li>Level 3</li>
+                            <li>Level 3
+                                <ul>
+                                    <li>Level 4</li>
+                                    <li>Level 4
+                                        <ul>
+                                            <li>Level 5</li>
+                                            <li>Level 5</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Level 1</li>
+        </ul>
+
+        <br>
+
+        <h2>Horizontal Lists</h2>
+
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+    </body>
+</html>
