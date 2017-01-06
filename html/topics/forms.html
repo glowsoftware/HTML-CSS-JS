@@ -4,25 +4,95 @@
         <title>Forms</title>
     </head>
     <body>
-        <form method="get">
+        <form method="get" autocomplete="on">
+
             <fieldset>
                 <legend>Personal information:</legend>
 
                 <p>First name:</p>
-                <input type="text" name="firstname">
+                <input type="text" name="firstname" placeholder="Bob" autofocus required>
 
                 <p>Last name:</p>
-                <input type="text" name="lastname">
+                <input type="text" name="lastname" placeholder="Bobovsky" required>
+
+                <p>Password (max 15 characters):</p>
+                <input type="password" name="password" maxlength="15" required>
 
                 <p>Gender:</p>
                 <input type="radio" name="gender" value="male"> Male<br>
                 <input type="radio" name="gender" value="female"> Female<br>
                 <input type="radio" name="gender" value="other"> Other
 
-                <br><br>
+                <!-- HTML 5 -->
 
-                <input type="submit" value="Submit">
+                <p>Birthday:</p>
+                <input type="date" name="birthday" min="1900-01-01">
+
+                <p>E-mail:</p>
+                <input type="email" name="email">
+
+                <p>Telephone:</p>
+                <input type="tel" name="tel">
+
+                <p>Home page:</p>
+                <input type="url" name="homepage">
+
+                <p>Country code:</p>
+                <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+
+                <p>Month of work start:</p>
+                <input type="month" name="work_start">
+
+                <p>Tea time:</p>
+                <input type="time" name="tea_time" value="17:00" disabled>
             </fieldset>
+
+            <fieldset>
+                <legend>Other information:</legend>
+
+                <p>Car:</p>
+                <select name="car">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+
+                <p>Interests:</p>
+                <textarea name="interests" rows="10" cols="30"></textarea>
+
+                <p>Pictures:</p>
+                <input type="file" name="pictures" multiple>
+
+                <!-- HTML 5 -->
+
+                <p>Favorite browser:</p>
+                <input list="browser">
+                <datalist id="browser">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+
+                <p>Favorite color:</p>
+                <input type="color" name="color">
+
+                <p>Your assessment (between 1 and 5):</p>
+                <input type="number" name="assessment" min="1" max="5">
+
+                <p>Quantity:</p>
+                <input type="number" name="quantity" min="0" max="100" step="10" value="30">
+            </fieldset>
+
+            <br><br>
+
+            <input type="submit" value="Submit" formenctype="multipart/form-data">
+
+            <input type="submit" value="Submit without validation" formnovalidate>
+
+            <input type="reset" value="Clear form">
         </form>
     </body>
 </html>
