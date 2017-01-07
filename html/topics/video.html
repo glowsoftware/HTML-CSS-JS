@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Video</title>
+    </head>
+    <body>
+        <div style="text-align:center">
+            <button onclick="playPause()">Play/Pause</button>
+            <button onclick="makeBig()">Big</button>
+            <button onclick="makeSmall()">Small</button>
+            <button onclick="makeNormal()">Normal</button>
+            <br><br>
+            <video id="video" width="420" controls>
+                <source src="../../media/bigbuckbunny.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <script>
+            var video = document.getElementById("video");
+
+            function playPause() {
+                if (video.paused)
+                    video.play();
+                else
+                    video.pause();
+            }
+
+            function makeBig() {
+                video.width = 560;
+            }
+
+            function makeSmall() {
+                video.width = 320;
+            }
+
+            function makeNormal() {
+                video.width = 420;
+            }
+        </script>
+        <p>Video courtesy of <a href="http://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+    </body>
+</html>

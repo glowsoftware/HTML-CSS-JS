@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Canvas</title>
+    </head>
+    <body>
+        <canvas id="canvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
+
+        <script>
+            var canvas = document.getElementById("canvas");
+
+            var ctx = canvas.getContext("2d");
+            line(ctx);
+            circle(ctx);
+
+            text(ctx);
+            strokeText(ctx);
+
+            linearGradient(ctx);
+
+            function line(ctx) {
+                ctx.moveTo(0,0);
+                ctx.lineTo(400, 400);
+                ctx.stroke();
+            }
+
+            function circle(ctx) {
+                ctx.beginPath();
+                ctx.arc(300,50,40,0,2*Math.PI);
+                ctx.stroke();
+            }
+
+            function text(ctx) {
+                ctx.font = "30px Arial";
+                ctx.fillText("Hello World", 200, 200);
+            }
+
+            function strokeText(ctx) {
+                ctx.font = "30px Arial";
+                ctx.strokeText("Hello World", 200, 300);
+            }
+
+            function linearGradient(ctx) {
+                // Create gradient
+                var grd = ctx.createLinearGradient(0,0,200,0);
+                grd.addColorStop(0,"red");
+                grd.addColorStop(1,"white");
+
+                // Fill with gradient
+                ctx.fillStyle = grd;
+                ctx.fillRect(10,10,150,80);
+            }
+        </script>
+    </body>
+</html>
