@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Backgrounds</title>
+        <style>
+            table, tr, td {
+                border: solid 1px;
+                border-collapse: collapse;
+            }
+
+            div {
+                width: 400px;
+                height: 200px;
+            }
+
+            #div1 {
+                background-color: lightblue;
+            }
+
+            #div2 {
+                background-image: url('../../images/html5.png');
+            }
+
+            #div3 {
+                background-image: url('../../images/html5.png');
+                background-repeat: repeat-x;
+            }
+
+            #div4 {
+                background-image: url('../../images/html5.png');
+                background-repeat: repeat-y;
+            }
+
+            #div5 {
+                background-image: url('../../images/html5.png');
+                background-repeat: no-repeat;
+            }
+
+            #div6 {
+                background-image: url('../../images/html5.png');
+                background-repeat: no-repeat;
+                background-position: right top;
+            }
+
+            #div7 {
+                background: url('../../images/html5.png') no-repeat right top;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>background-color: lightblue;</td>
+                <td><div id="div1"></div></td>
+            </tr>
+            <tr>
+                <td>background-image: url(...);</td>
+                <td><div id="div2"></div></td>
+            </tr>
+            <tr>
+                <td>background-image: url(...); background-repeat: repeat-x;</td>
+                <td><div id="div3"></div></td>
+            </tr>
+            <tr>
+                <td>background-image: url(...); background-repeat: repeat-y;</td>
+                <td><div id="div4"></div></td>
+            </tr>
+            <tr>
+                <td>background-image: url(...); background-repeat: no-repeat;</td>
+                <td><div id="div5"></div></td>
+            </tr>
+            <tr>
+                <td>background-image: url(...); background-repeat: no-repeat; background-position: right top;</td>
+                <td><div id="div6"></div></td>
+            </tr>
+            <tr>
+                <td>background: url(...) no-repeat right top;</td>
+                <td><div id="div7"></div></td>
+            </tr>
+        </table>
+    </body>
+</html>

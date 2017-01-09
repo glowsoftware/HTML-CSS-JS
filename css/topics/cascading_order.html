@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cascading Order</title>
+        <link rel="stylesheet" href="../styles.css">
+        <style>
+            .cascading-order-internal {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Cascading Order</h2>
+        <ol>
+            <li style="color:blue">Inline style (inside an HTML element)</li>
+            <li>
+                <span class="cascading-order-external">External</span> and
+                <span class="cascading-order-internal">internal</span> style sheets (in the head section)
+            </li>
+            <li>Browser default</li>
+        </ol>
+    </body>
+</html>
