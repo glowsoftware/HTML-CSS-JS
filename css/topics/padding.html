@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Padding</title>
+        <style>
+            div {
+                width: 800px;
+                border: 1px solid black;
+                background-color: lightblue;
+            }
+
+            .individual-padding {
+                padding-top: 50px;
+                padding-right: 30px;
+                padding-bottom: 50px;
+                padding-left: 80px;
+            }
+
+            .padding-shorthand-4 {
+                padding: 25px 50px 75px 100px;
+            }
+
+            .padding-shorthand-3 {
+                padding: 25px 50px 75px;
+            }
+
+            .padding-shorthand-2 {
+                padding: 25px 50px;
+            }
+
+            .padding-shorthand-1 {
+                padding: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Using individual padding properties</h2>
+        <div class="individual-padding">This div element has a top padding of 50px, a right padding of 30px, a bottom padding of 50px, and a left padding of 80px.</div>
+
+        <br>
+
+        <h2>Using the padding shorthand property</h2>
+        <div class="padding-shorthand-4">This div element has a top padding of 25px, a right padding of 50px, a bottom padding of 75px and a left padding of 100px.</div><br>
+        <div class="padding-shorthand-3">This div element has a top padding of 25px, a left and right padding of 50px, and a bottom padding of 75px.</div><br>
+        <div class="padding-shorthand-2">This div element has a top and bottom padding of 25px, and a left and right padding of 50px.</div><br>
+        <div class="padding-shorthand-1">This div element has a top, right, bottom and left paddding of 25px.</div>
+    </body>
+</html>

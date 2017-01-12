@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Outline</title>
+        <style>
+            p {
+                border: 1px solid black;
+                outline-color:red;
+            }
+
+            .dotted {outline-style: dotted;}
+            .dashed {outline-style: dashed;}
+            .solid {outline-style: solid;}
+            .double {outline-style: double;}
+            .groove {outline-style: groove;}
+            .ridge {outline-style: ridge;}
+            .inset {outline-style: inset;}
+            .outset {outline-style: outset;}
+
+            .one {
+                outline-style: double;
+                outline-color: green;
+                outline-width: thin;
+            }
+
+            .two {
+                outline-style: double;
+                outline-color: green;
+                outline-width: 5px;
+            }
+
+            .outline-offset-property {
+                margin: 20px;
+                width: 150px;
+                padding: 10px;
+                height: 70px;
+                border: 2px solid black;
+                outline: 2px solid red;
+                outline-offset: 15px;
+            }
+
+            .outline-property {
+                outline: 5px dotted red;
+            }
+        </style>
+    </head>
+    <body>
+        <p>The CSS outline properties specify the style, color, and width of an outline.</p>
+        <p>An outline is a line that is drawn around elements (outside the borders) to make the element "stand out".</p>
+        <p>The outline is <strong>NOT</strong> a part of an element's dimensions; the element's total width and height is not affected by the width of the outline.</p>
+
+        <h2>The outline-style and outline-color Property</h2>
+
+        <p class="dotted">A dotted outline</p>
+        <p class="dashed">A dashed outline</p>
+        <p class="solid">A solid outline</p>
+        <p class="double">A double outline</p>
+        <p class="groove">A groove outline</p>
+        <p class="ridge">A ridge outline</p>
+        <p class="inset">An inset outline</p>
+        <p class="outset">An outset outline</p>
+
+        <h2>The outline-width Property</h2>
+
+        <p class="one">This is some text.</p>
+        <p class="two">This is some text.</p>
+
+        <h2>The outline-offset Property</h2>
+
+        <div class="outline-offset-property">This div has an outline border 15px outside the border edge.</div>
+
+        <h2>The outline Property</h2>
+
+        <div class="outline-property">An outline.</div>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Margins</title>
+        <style>
+            div {
+                border: 1px solid black;
+                background-color: lightblue;
+            }
+
+            .individual-margin {
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-right: 150px;
+                margin-left: 80px;
+            }
+
+            .individual-margin-shorthand {
+                margin: 100px 150px 100px 80px;
+            }
+
+            .margin-auto {
+                width:500px;
+                margin: auto;
+            }
+
+            .container {
+                margin-left: 100px;
+            }
+
+            .margin-inherit {
+                margin-left: inherit;
+            }
+
+            #div1 {
+                margin: 0 0 70px 0;
+            }
+
+            #div2 {
+                margin: 50px 0 0 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Using individual margin properties</h2>
+
+        <div class="individual-margin">This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px.</div>
+
+        <div class="individual-margin-shorthand">margin: 100px 150px 100px 80px;</div>
+
+        <h2>Use of the auto Value</h2>
+        <p>You can set the margin property to auto to horizontally center the element within its container.
+            The element will then take up the specified width, and the remaining space will be split equally between the left and right margins:</p>
+
+        <div class="margin-auto">This div will be centered because it has margin: auto;</div>
+
+        <h2>Use of the inherit value</h2>
+        <p>Let the left margin be inherited from the parent element:</p>
+
+        <div class="container">
+            <p class="margin-inherit">This is a paragraph with an inherited left margin (from the div element).</p>
+        </div>
+
+        <h2>Margin Collapse</h2>
+        <p>
+            In this example the div1 has a bottom margin of 70px and the div2 has a top margin of 50px.
+            Then, the vertical margin between div1 and div2 should have been 120px (70px + 50px).
+            However, due to margin collapse, the actual margin ends up being 70px.
+            This does not happen on left and right margins.
+        </p>
+
+        <div id="div1">div1</div>
+        <div id="div2">div2</div>
+    </body>
+</html>
