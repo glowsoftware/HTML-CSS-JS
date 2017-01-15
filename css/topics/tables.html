@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tables</title>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+
+            .border-collapse-property {
+                border-collapse: collapse;
+            }
+
+            .table-width-property {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            .table-width-property th {
+                height: 50px;
+            }
+
+            .th-text-align-property th {
+                text-align: left;
+            }
+
+            .td-text-align-property td {
+                text-align: right
+            }
+
+            .td-vertical-align-property td {
+                height: 50px;
+                vertical-align: bottom;
+            }
+
+            .th-td-padding-property th,
+            .th-td-padding-property td {
+                padding: 15px;
+            }
+
+            .horizontal-devider {
+                border: none;
+                border-collapse: collapse;
+            }
+
+            .horizontal-devider th,
+            .horizontal-devider td {
+                padding: 8px;
+                text-align: left;
+                border: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .hoverable-table tr:hover{
+                background-color:#f5f5f5
+            }
+
+            .striped-table tr:nth-child(even) {
+                background-color: #f2f2f2
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Table Borders</h1>
+        <table>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+            </tr>
+        </table>
+
+        <h1>Collapse Table Borders</h1>
+        <table class="border-collapse-property">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+            </tr>
+        </table>
+
+        <h1>Table Width and Height</h1>
+        <table class="table-width-property">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+            </tr>
+        </table>
+
+        <h1>Horizontal Alignment</h1>
+        <table class="table-width-property th-text-align-property td-text-align-property">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+            </tr>
+        </table>
+
+        <h1>Vertical Alignment</h1>
+        <table class="table-width-property th-text-align-property td-text-align-property td-vertical-align-property">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+            </tr>
+        </table>
+
+        <h1>Table Padding</h1>
+        <table class="table-width-property th-text-align-property td-text-align-property td-vertical-align-property th-td-padding-property">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+            </tr>
+        </table>
+
+        <h1>Horizontal Dividers</h1>
+        <table class="horizontal-devider">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+            </tr>
+        </table>
+
+        <h1>Hoverable Table</h1>
+        <table class="horizontal-devider hoverable-table">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+            </tr>
+        </table>
+
+        <h1>Striped Table</h1>
+        <table class="horizontal-devider striped-table">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Griffin</td>
+            </tr>
+        </table>
+
+        <h1>Responsive Table</h1>
+        <div style="overflow-x:auto;">
+            <table class="horizontal-devider">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Points</th>
+                    <th>Points</th>
+                    <th>Points</th>
+                    <th>Points</th>
+                    <th>Points</th>
+                    <th>Points</th>
+                    <th>Points</th>
+                    <th>Points</th>
+                    <th>Points</th>
+                    <th>Points</th>
+                </tr>
+                <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                    <td>94</td>
+                    <td>94</td>
+                    <td>94</td>
+                    <td>94</td>
+                    <td>94</td>
+                    <td>94</td>
+                    <td>94</td>
+                    <td>94</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td>Adam</td>
+                    <td>Johnson</td>
+                    <td>67</td>
+                    <td>67</td>
+                    <td>67</td>
+                    <td>67</td>
+                    <td>67</td>
+                    <td>67</td>
+                    <td>67</td>
+                    <td>67</td>
+                    <td>67</td>
+                    <td>67</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

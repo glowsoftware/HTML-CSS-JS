@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Display</title>
+        <style>
+            div, span {
+                border: 2px solid lightblue;
+            }
+
+            .floating-box {
+                display: inline-block;
+                width: 150px;
+                height: 75px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>The display Property</h1>
+        <div>default div display (block)</div>
+        <span>default span display (inline)</span>
+        <br><br>
+        <div style="display: inline;">div with display: inline;</div>
+        <span style="display: block;">span with display: block;</span>
+
+        <h1>Hide an Element - display:none or visibility:hidden?</h1>
+        <h3>display: none; (The element will be hidden, and the page will be displayed as if the element is not there):</h3>
+        <span style="display: none;">Some text</span> - hidden span
+        <h3>visibility: hidden; (The element will still take up the same space as before. The element will be hidden, but still affect the layout):</h3>
+        <span style="visibility: hidden;">Some text</span> - hidden span
+
+        <h1>The inline-block Value</h1>
+        <p>inline-block elements are like inline elements but they can have a width and a height.</p>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+    </body>
+</html>

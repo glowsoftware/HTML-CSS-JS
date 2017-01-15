@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Links</title>
+        <style>
+            /* unvisited link */
+            a:link {
+                color: red;
+            }
+
+            /* visited link */
+            a:visited {
+                color: green;
+            }
+
+            /* mouse over link */
+            a:hover {
+                color: hotpink;
+            }
+
+            /* selected link */
+            a:active {
+                color: blue;
+            }
+
+            .button {
+                margin-top: 20px;
+            }
+
+            .button:link, .button:visited {
+                background-color: #f44336;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            .button:hover, .button:active {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#">a href</a>
+        <br>
+        <a href="#" class="button">a href styled like button</a>
+    </body>
+</html>
