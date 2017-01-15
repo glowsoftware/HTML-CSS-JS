@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Align</title>
+        <style>
+            div {
+                border: 3px solid #73AD21;
+            }
+
+            .center {
+                margin: auto;
+                width: 60%;
+                padding: 10px;
+            }
+
+            .center-text {
+                text-align: center;
+            }
+
+            .center-img {
+                margin: auto;
+                display: block;
+            }
+
+            .center-using-padding {
+                padding: 70px 0;
+            }
+
+            .center-using-line-height {
+                line-height: 200px;
+                height: 200px;
+                text-align: center;
+            }
+
+            .center-using-line-height p {
+                line-height: 1.5;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .center-using-position-transform {
+                height: 200px;
+                position: relative;
+            }
+
+            .center-using-position-transform p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Layout - Horizontal & Vertical Align</h1>
+        <h2>Center Align Elements</h2>
+        <p>To horizontally center a block element (like div), use margin: auto;</p>
+        <div class="center">
+            <p><b>Note: </b>Using margin:auto will not work in IE8, unless a !DOCTYPE is declared.</p>
+        </div>
+        <h2>Center Text</h2>
+        <div class="center-text">
+            <p>This text is centered.</p>
+        </div>
+        <h2>Center an Image</h2>
+        <p>To center an image, use margin: auto; and make it into a block element:</p>
+        <img class="center-img" src="../../images/eiffel-tower.png" alt="Paris">
+        <h2>Center Vertically - Using padding</h2>
+        <p>In this example, we use the padding property to center the div element vertically:</p>
+        <div class="center-using-padding">
+            <p>I am vertically centered.</p>
+        </div>
+        <h2>Center Vertically - Using line-height</h2>
+        <p>In this example, we use the line-height property with a value that is equal to the height property to center the div element:</p>
+        <div class="center-using-line-height">
+            <p>I am vertically and horizontally centered. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
+                nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue
+                eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+                lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi,
+                sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui
+                eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.
+                Cras ac leo purus. Mauris quis diam velit.</p>
+        </div>
+        <h2>Center Vertically - Using position & transform</h2>
+        <p>In this example, we use positioning and the transform property to vertically and horizontally center the div element:</p>
+        <div class="center-using-position-transform">
+            <p>I am vertically and horizontally centered.</p>
+        </div>
+        <p>Note: The transform property is not supported in IE8 and earlier versions.</p>
+    </body>
+</html>

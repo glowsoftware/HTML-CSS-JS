@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Combinators</title>
+        <style>
+            .descendant-selector p {
+                background-color: yellow;
+            }
+
+            .child-selector > p {
+                background-color: yellow;
+            }
+
+            .adjacent-sibling-selector + p {
+                background-color: yellow;
+            }
+
+            .sibling-selector ~ p {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Combinators</h1>
+        <h2>Descendant Selector (div p)</h2>
+        <div class="descendant-selector">
+            <p>Paragraph 1 in the div with class descendant-selector.</p>
+            <p>Paragraph 2 in the div with class descendant-selector.</p>
+            <span><p>Paragraph 3 in span witch is in the div with class descendant-selector.</p></span>
+        </div>
+        <p>Paragraph 4. Not in a div with class descendant-selector.</p>
+        <p>Paragraph 5. Not in a div with class descendant-selector.</p>
+        <h2>Child Selector (div > p)</h2>
+        <div class="child-selector">
+            <p>Paragraph 1 in the div with class child-selector.</p>
+            <p>Paragraph 2 in the div with class child-selector.</p>
+            <span><p>Paragraph 3 in span witch is in the div with class child-selector.</p></span>
+        </div>
+        <p>Paragraph 4. Not in a div with class child-selector.</p>
+        <p>Paragraph 5. Not in a div with class child-selector.</p>
+        <h2>Adjacent Sibling Selector (div + p)</h2>
+        <div class="adjacent-sibling-selector">
+            <p>Paragraph 1 is in the div with class adjacent-sibling-selector.</p>
+            <p>Paragraph 2 is in the div with class adjacent-sibling-selector.</p>
+        </div>
+        <p>Paragraph 4. Not in the div with class adjacent-sibling-selector.</p>
+        <p>Paragraph 5. Not in the div with class adjacent-sibling-selector.</p>
+        <h2>General Sibling Selector (div ~ p)</h2>
+        <div class="sibling-selector">
+            <p>Paragraph 1 is in the div with class sibling-selector.</p>
+            <p>Paragraph 2 is in the div with class sibling-selector.</p>
+        </div>
+        <p>Paragraph 4. Not in the div with class sibling-selector.</p>
+        <p>Paragraph 5. Not in the div with class sibling-selector.</p>
+    </body>
+</html>

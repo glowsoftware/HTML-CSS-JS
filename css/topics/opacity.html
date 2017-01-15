@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Opacity</title>
+        <style>
+            div {
+                display: inline-block;
+                width: 150px;
+            }
+
+            img {
+                display: block;
+            }
+
+            .opacity-property-02 {
+                opacity: 0.2;
+                filter: alpha(opacity=20); /* For IE8 and earlier */
+            }
+
+            .opacity-property-05 {
+                opacity: 0.5;
+                filter: alpha(opacity=50); /* For IE8 and earlier */
+            }
+
+            .opacity-property-1 {
+                opacity: 1;
+                filter: alpha(opacity=100); /* For IE8 and earlier */
+            }
+
+            .transparent-hover-effect {
+                opacity: 0.2;
+            }
+
+            .transparent-hover-effect:hover {
+                opacity: 1;
+            }
+
+            .transparent-box {
+                background: rgb(76, 175, 80);
+                padding: 10px;
+                display: block;
+            }
+
+            .transparent-box.first {
+                background: rgba(76, 175, 80, 0.1);
+            }
+
+            .transparent-box.second {
+                background: rgba(76, 175, 80, 0.3);
+            }
+
+            .transparent-box.third {
+                background: rgba(76, 175, 80, 0.6);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Opacity / Transparency</h1>
+        <h2>Image Transparency</h2>
+        <p>The opacity property specifies the transparency of an element. The lower the value, the more transparent:</p>
+        <div>
+            <img src="../../images/html5.png" class="opacity-property-02"/>
+            <p>opacity: 0.2;</p>
+        </div>
+        <div>
+            <img src="../../images/html5.png" class="opacity-property-05"/>
+            <p>opacity: 0.5;</p>
+        </div>
+        <div>
+            <img src="../../images/html5.png" class="opacity-property-1"/>
+            <p>opacity: 1; (default)</p>
+        </div>
+        <h2>Transparent Hover Effect</h2>
+        <div>
+            <img src="../../images/html5.png" class="transparent-hover-effect"/>
+        </div>
+        <div>
+            <img src="../../images/html5.png" class="transparent-hover-effect"/>
+        </div>
+        <div>
+            <img src="../../images/html5.png" class="transparent-hover-effect"/>
+        </div>
+        <h2>Transparent Box</h2>
+        <h3>With opacity:</h3>
+        <div class="transparent-box" style="opacity:0.1;"><p>10% opacity</p></div>
+        <div class="transparent-box" style="opacity:0.3;"><p>30% opacity</p></div>
+        <div class="transparent-box" style="opacity:0.6;"><p>60% opacity</p></div>
+        <div class="transparent-box"><p>opacity 1</p></div>
+        <h3>With RGBA color values:</h3>
+        <div class="transparent-box first"><p>10% opacity</p></div>
+        <div class="transparent-box second"><p>30% opacity</p></div>
+        <div class="transparent-box third"><p>60% opacity</p></div>
+        <div class="transparent-box"><p>default</p></div>
+        <h4>Notice how the text gets transparent as well as the background color when using the opacity property.</h4>
+    </body>
+</html>

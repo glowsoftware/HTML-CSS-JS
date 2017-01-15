@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Float</title>
+        <style>
+            img {
+                float: left;
+            }
+
+            h2 {
+                clear: left;
+            }
+
+            .div1 {
+                float: left;
+                width: 100px;
+                height: 50px;
+                margin: 10px;
+                border: 3px solid #73AD21;
+            }
+
+            .div2 {
+                border: 1px solid red;
+            }
+
+            .div3 {
+                float: left;
+                width: 100px;
+                height: 50px;
+                margin: 10px;
+                border: 3px solid #73AD21;
+            }
+
+            .div4 {
+                border: 1px solid red;
+                clear: left;
+            }
+
+            .container {
+                border: 3px solid #73AD21;
+            }
+
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Layout - float and clear</h1>
+        <h2>The float Property</h2>
+        <p>The float property specifies whether or not an element should float.</p>
+        <p>
+            <img src="../../images/html5.png" width="100" height="100">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
+            nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue
+            eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+            lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi,
+            sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui
+            eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.
+            Cras ac leo purus. Mauris quis diam velit.
+        </p>
+
+        <h2>The clear Property</h2>
+        <p>The clear property is used to control the behavior of floating elements. Elements after a floating element will flow around it. To avoid this, use the clear property.</p>
+        <h3>Without clear</h3>
+        <div class="div1">div1</div>
+        <div class="div2">div2 - Notice that the div2 element is after div1, in the HTML code. However, since div1 is floated to the left, this happens: the text in div2 is floated around div1, and div2 surrounds the whole thing.</div>
+        <h3>Using clear</h3>
+        <div class="div3">div3</div>
+        <div class="div4">div4 - Using clear moves div4 down below the floated div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+
+        <h1>The clearfix Hack</h1>
+        <p>In this example, the image is taller than the element containing it, and it is floated, so it overflows outside of its container:</p>
+        <div class="container"><img src="../../images/html5.png" width="100" height="100">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
+        <p style="clear:left">Add a clearfix class with overflow: auto; to the containing element, to fix this problem:</p>
+        <div class="container clearfix"><img src="../../images/html5.png" width="100" height="100">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
+    </body>
+</html>
