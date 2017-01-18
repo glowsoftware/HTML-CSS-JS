@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Counters</title>
+        <style>
+            body {
+                counter-reset: section;
+            }
+
+            h2 {
+                counter-reset: subsection;
+            }
+
+            h2::before {
+                counter-increment: section;
+                content: counter(section) ". ";
+            }
+
+            h3::before {
+                counter-increment: subsection;
+                content: counter(section) "." counter(subsection) " ";
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Counters</h1>
+        <p>CSS counters are "variables" maintained by CSS whose values can be incremented by CSS rules
+            (to track how many times they are used). Counters let you adjust the appearance of content based on its placement in the document.</p>
+
+        <h2>Fruit</h2>
+        <h3>apple</h3>
+        <h3>banana</h3>
+
+        <h2>Vegetables</h2>
+        <h3>bean</h3>
+        <h3>carrot</h3>
+    </body>
+</html>
