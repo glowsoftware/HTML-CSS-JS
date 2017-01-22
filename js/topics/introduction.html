@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Introduction</title>
+        <style>
+            #container {
+                width: 200px;
+            }
+
+            #bulb {
+                width:100px;
+                display: block;
+                margin: auto;
+            }
+
+            #switcher {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: block;
+                margin: 10px auto;
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            var isTurnOn = false;
+
+            function turn(){
+                var bulb = document.getElementById('bulb');
+                var switcher = document.getElementById('switcher');
+                if (isTurnOn) {
+                    bulb.src = '../../images/bulboff.gif';
+                    switcher.innerText = 'Turn on the light';
+                } else {
+                    bulb.src = '../../images/bulbon.gif';
+                    switcher.innerText = 'Turn off the light';
+                }
+                isTurnOn = !isTurnOn;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <img id="bulb" src="../../images/bulboff.gif">
+            <button id="switcher" onclick="turn()">Turn on the light</button>
+        </div>
+    </body>
+</html>
