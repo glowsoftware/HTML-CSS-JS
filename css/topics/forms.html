@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Forms</title>
+        <style>
+            label {
+                display: block;
+            }
+
+            input[type=text] {
+                display: block;
+                width: 25%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                -webkit-transition: width 0.4s ease-in-out;
+                transition: width 0.4s ease-in-out;
+            }
+
+            input[type=button], input[type=submit], input[type=reset] {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-decoration: none;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+            input[type=text]:focus {
+                background-color: lightblue;
+                width: 30%;
+            }
+
+            input:invalid {
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" required>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

@@ -46,6 +46,68 @@
             #div7 {
                 background: url('../../images/html5.png') no-repeat right top;
             }
+
+            #div8 {
+                background: url('../../images/html5.png') right top no-repeat, url('../../images/mountains.jpg') left top no-repeat;
+            }
+
+            #div9 {
+                border: 1px solid black;
+                background: url('../../images/mountains.jpg') no-repeat;
+                background-size: 400px 200px;
+            }
+
+             #div10 {
+                border: 1px solid black;
+                background: url('../../images/mountains.jpg') no-repeat;
+                background-size: cover;
+            }
+
+             #div11 {
+                border: 1px solid black;
+                background: url('../../images/mountains.jpg') no-repeat;
+                background-size: contain;
+            }
+
+            #div12, #div13, #div14 {
+                border: 10px dotted black;
+                padding: 20px;
+                background: url('../../images/html5.png') no-repeat;
+                width: 200px;
+                height: 100px;
+            }
+
+            #div12 {
+                 background-origin: border-box;
+            }
+
+            #div13 {
+                 background-origin: padding-box;
+            }
+
+            #div14 {
+                 background-origin: content-box;
+            }
+
+            #div15, #div16, #div17 {
+                border: 10px dotted black;
+                padding: 20px;
+                background: lightblue;
+                width: 200px;
+                height: 100px;
+            }
+
+            #div15 {
+                background-clip: border-box;
+            }
+
+            #div16 {
+                background-clip: padding-box;
+            }
+
+            #div17 {
+                background-clip: content-box;
+            }
         </style>
     </head>
     <body>
@@ -79,5 +141,31 @@
                 <td><div id="div7"></div></td>
             </tr>
         </table>
+        <h2>CSS3 Multiple Backgrounds</h2>
+        <div id="div8"></div>
+        <h2>CSS3 Background Size</h2>
+        <h4>Original image has 600 x 400</h4>
+        <p>400px 200px</p>
+        <div id="div9"></div>
+        <p>cover</p>
+        <div id="div10"></div>
+        <p>contain</p>
+        <div id="div11"></div>
+        <h2>CSS3 background-origin Property</h2>
+        <p>The CSS3 background-origin property specifies where the background image is positioned.</p>
+        <h4>border-box - the background image starts from the upper left corner of the border</h4>
+        <div id="div12"></div>
+        <h4>padding-box - (default) the background image starts from the upper left corner of the padding edge</h4>
+        <div id="div13"></div>
+        <h4>content-box - the background image starts from the upper left corner of the content</h4>
+        <div id="div14"></div>
+        <h2>CSS3 background-clip Property</h2>
+        <p>The CSS3 background-clip property specifies the painting area of the background.</p>
+        <h4>border-box - (default) the background is painted to the outside edge of the border</h4>
+        <div id="div15"></div>
+        <h4>padding-box - the background is painted to the outside edge of the padding</h4>
+        <div id="div16"></div>
+        <h4>content-box - the background is painted within the content box</h4>
+        <div id="div17"></div>
     </body>
 </html>

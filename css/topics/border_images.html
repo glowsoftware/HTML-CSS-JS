@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Border Images</title>
+        <style>
+            div {
+                border: 10px solid transparent;
+                padding: 15px;
+                width: 500px;
+            }
+
+            .border-img-round {
+                border-image: url(../../images/border.png) 34% round;
+            }
+
+            .border-img-stretch {
+                border-image: url(../../images/border.png) 34% stretch;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Border Images</h1>
+        <h2>CSS3 border-image Property</h2>
+        <h4>round:</h4>
+        <div class="border-img-round">Here, the middle sections of the image are repeated to create the border.</div>
+        <h4>stretch:</h4>
+        <div class="border-img-stretch">Here, the middle sections of the image are stretched to create the border.</div>
+    </body>
+</html>

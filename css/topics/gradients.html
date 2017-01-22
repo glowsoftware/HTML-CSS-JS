@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gradients</title>
+        <style>
+            div {
+                height: 100px;
+            }
+
+            .linear-gradient-property {
+                background: linear-gradient(green, blue);
+            }
+
+            .linear-gradient-property-to-right {
+                background: linear-gradient(to right, green, blue);
+            }
+
+            .linear-gradient-property-to-bottom-right {
+                background: linear-gradient(to bottom right, green, blue);
+            }
+
+            .linear-gradient-property-multiple-colors {
+                background: linear-gradient(to right, green, blue, red);
+            }
+
+            .linear-gradient-property-transparency {
+                background: linear-gradient(to right, rgba(0, 0, 255, 0), rgba(0, 0, 255, 1));
+            }
+
+            .repeating-linear-gradient-property {
+                background: repeating-linear-gradient(green, blue 30%); <!-- 30% - blue color is placed at 30% of background -->
+            }
+
+            .radial-gradient-property {
+                background: radial-gradient(green 5%, blue 15%, red 60%)
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Gradients</h1>
+        <h2>CSS3 Linear Gradients</h2>
+        <h4>Linear Gradient - Top to Bottom (this is default)</h4>
+        <div class="linear-gradient-property"></div>
+        <h4>Linear Gradient - Left to Right</h4>
+        <div class="linear-gradient-property-to-right"></div>
+        <h4>Linear Gradient - Diagonal</h4>
+        <div class="linear-gradient-property-to-bottom-right"></div>
+        <h4>Using Multiple Color Stops</h4>
+        <div class="linear-gradient-property-multiple-colors"></div>
+        <h4>Using Transparency</h4>
+        <div class="linear-gradient-property-transparency"></div>
+        <h4>Repeating a linear-gradient</h4>
+        <div class="repeating-linear-gradient-property"></div>
+        <h2>CSS3 Radial Gradients</h2>
+        <div class="radial-gradient-property"></div>
+    </body>
+</html>

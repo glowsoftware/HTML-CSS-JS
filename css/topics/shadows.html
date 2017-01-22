@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Shadows</title>
+        <style>
+            p {
+               font-size: xx-large;
+            }
+
+            .text-shadow-property {
+                text-shadow: 3px 3px 3px lightblue;
+            }
+
+            .text-shadow-property-multiple {
+                color: white;
+                text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+            }
+
+            .cardheader {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px;
+            }
+
+            .cardcontainer {
+                padding: 10px;
+            }
+
+            .card {
+                width: 250px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Shadows</h1>
+        <h2>CSS3 text-shadow Property</h2>
+        <p class="text-shadow-property">Text shadow effect!</p>
+        <h3>Multiple Shadows:</h3>
+        <p class="text-shadow-property-multiple">Text multiple shadows effect!</p>
+        <h2>CSS3 box-shadow Property</h2>
+        <h3>Card</h3>
+        <div class="card">
+            <div class="cardheader">
+                <h1>31</h1>
+            </div>
+            <div class="cardcontainer">
+                July 31, 1989
+            </div>
+        </div>
+    </body>
+</html>

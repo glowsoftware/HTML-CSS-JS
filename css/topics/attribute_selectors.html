@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Attribute Selectors</title>
+        <style>
+            img {
+                width: 150px;
+                height: 100px;
+            }
+
+            .attribute-selector img[alt] {
+                border: 3px solid yellow;
+            }
+
+            .attribute-value-selector img[alt="Northern Lights"] {
+                border: 3px solid yellow;
+            }
+
+            .attribute-contains-value-selector img[alt~=Norway] {
+                border: 3px solid yellow;
+            }
+
+            .attribute-starts-with-value-selector img[alt|=Mountains] {
+                border: 3px solid yellow;
+            }
+
+            .attribute-starts-with-phrase-selector img[alt^=Troll] {
+                border: 3px solid yellow;
+            }
+
+            .attribute-ends-with-phrase-selector img[alt$=s] {
+                border: 3px solid yellow;
+            }
+
+            .attribute-contains-phrase-selector img[alt*=o] {
+                border: 3px solid yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Attribute Selectors</h1>
+        <p>It is possible to style HTML elements that have specific attributes or attribute values.</p>
+        <h2>CSS [attribute] Selector</h2>
+        <p>Image with an alt attribute gets a yellow border:</p>
+        <div class="attribute-selector">
+            <img src="../../images/fjords.jpg" alt="Trolltunga Norway">
+            <img src="../../images/lights.jpg" alt="Northern Lights">
+            <img src="../../images/mountains.jpg" alt="Mountains">
+        </div>
+        <h2>CSS [attribute="value"] Selector</h2>
+        <p>Image with alt="Northern Lights" gets a yellow border:</p>
+        <div class="attribute-value-selector">
+            <img src="../../images/fjords.jpg" alt="Trolltunga Norway">
+            <img src="../../images/lights.jpg" alt="Northern Lights">
+            <img src="../../images/mountains.jpg" alt="Mountains">
+        </div>
+        <h2>CSS [attribute~="value"] Selector</h2>
+        <p>Image with alt="Trolltunga Norway" gets a yellow border, because alt value contains word 'Norway':</p>
+        <div class="attribute-contains-value-selector">
+            <img src="../../images/fjords.jpg" alt="Trolltunga Norway">
+            <img src="../../images/lights.jpg" alt="Northern Lights">
+            <img src="../../images/mountains.jpg" alt="Mountains">
+        </div>
+        <h2>CSS [attribute|="value"] Selector</h2>
+        <p>Image with alt="Mountains" gets a yellow border, because alt value starts with word 'Mountains':</p>
+        <div class="attribute-starts-with-value-selector">
+            <img src="../../images/fjords.jpg" alt="Trolltunga Norway">
+            <img src="../../images/lights.jpg" alt="Northern Lights">
+            <img src="../../images/mountains.jpg" alt="Mountains">
+        </div>
+        <p><strong>Note:</strong> The value has to be a whole word, either alone or followed by a hyphen( - )!</p>
+        <h2>CSS [attribute^="value"] Selector</h2>
+        <p>Image with alt="Trolltunga Norway" gets a yellow border, because alt value begins with 'Troll':</p>
+        <div class="attribute-starts-with-phrase-selector">
+            <img src="../../images/fjords.jpg" alt="Trolltunga Norway">
+            <img src="../../images/lights.jpg" alt="Northern Lights">
+            <img src="../../images/mountains.jpg" alt="Mountains">
+        </div>
+        <p><strong>Note:</strong> The value does not have to be a whole word!</p>
+        <h2>CSS [attribute$="value"] Selector</h2>
+        <p>Images with alt="Northern Lights" and alt="Mountains" gets a yellow border, because alt value ends with 's':</p>
+        <div class="attribute-ends-with-phrase-selector">
+            <img src="../../images/fjords.jpg" alt="Trolltunga Norway">
+            <img src="../../images/lights.jpg" alt="Northern Lights">
+            <img src="../../images/mountains.jpg" alt="Mountains">
+        </div>
+        <p><strong>Note:</strong> The value does not have to be a whole word!</p>
+        <h2>CSS [attribute*="value"] Selector</h2>
+        <p>All images gets a yellow border, because all have alt value which contains 'o':</p>
+        <div class="attribute-contains-phrase-selector">
+            <img src="../../images/fjords.jpg" alt="Trolltunga Norway">
+            <img src="../../images/lights.jpg" alt="Northern Lights">
+            <img src="../../images/mountains.jpg" alt="Mountains">
+        </div>
+        <p><strong>Note:</strong> The value does not have to be a whole word!</p>
+    </body>
+</html>
