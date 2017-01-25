@@ -75,6 +75,25 @@
             .font-variant-property-2 {
                 font-variant: small-caps;
             }
+
+            @font-face {
+                font-family: Raleway;
+                src: url(../../fonts/Raleway-Medium.otf);
+            }
+
+            .font-face-property-raleway {
+                font-family: Raleway;
+            }
+
+            @font-face {
+                font-family: Stalemate;
+                src: url(../../fonts/Stalemate-Regular.ttf);
+            }
+
+            .font-face-property-stalemate {
+                font-family: Stalemate;
+                font-size: 40px;
+            }
         </style>
     </head>
     <body>
@@ -105,5 +124,9 @@
         <h1>Font Variant</h1>
         <p class="font-variant-property-1"><strong>font-variant: normal;</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         <p class="font-variant-property-2"><strong>font-variant: small-caps;</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+        <h1>CSS3 @font-face</h1>
+        <p class="font-face-property-raleway">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p class="font-face-property-stalemate">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
     </body>
 </html>

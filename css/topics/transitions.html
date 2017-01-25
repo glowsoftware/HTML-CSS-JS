@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Transitions</title>
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                background: lightblue;
+                margin-top: 10px;
+            }
+
+            .transition-width-height {
+                transition: width 2s, height 4s;
+            }
+
+            .transition-width-height:hover {
+                width: 300px;
+                height: 300px;
+            }
+
+            [class^=transition-timing-function] {
+                transition: width 3s;
+            }
+
+            [class^=transition-timing-function]:hover {
+                width: 300px;
+            }
+
+            .transition-timing-function-linear {
+                transition-timing-function: linear;
+            }
+
+            .transition-timing-function-ease {
+                transition-timing-function: ease;
+            }
+
+            .transition-timing-function-ease-in {
+                transition-timing-function: ease-in;
+            }
+
+            .transition-timing-function-ease-out {
+                transition-timing-function: ease-out;
+            }
+
+            .transition-timing-function-ease-in-out {
+                transition-timing-function: ease-in-out;
+            }
+
+            .transition-delay-property {
+                transition: width 3s;
+                transition-delay: 1s;
+            }
+
+            .transition-delay-property:hover {
+                width: 300px;
+            }
+
+            .transition-and-transformation {
+                transition: width 2s, height 2s, transform 2s;
+            }
+
+            .transition-and-transformation:hover {
+                width: 300px;
+                height: 300px;
+                transform: rotate(180deg);
+            }
+
+            .transition-property {
+                transition: width 3s linear 1s;
+            }
+
+            .transition-property:hover {
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Transitions</h1>
+        <p>Hover over the light blue squares to see the transition effects.</p>
+        <h2>Several Property Values</h2>
+        <div class="transition-width-height">transition: width 2s, height 4s;</div>
+        <h2 class="speed-curve">Specify the Speed Curve of the Transition</h2>
+        <div class="transition-timing-function-linear">linear</div>
+        <div class="transition-timing-function-ease">ease</div>
+        <div class="transition-timing-function-ease-in">ease-in</div>
+        <div class="transition-timing-function-ease-out">ease-out</div>
+        <div class="transition-timing-function-ease-in-out">ease-in-out</div>
+        <h2>Delay the Transition Effect</h2>
+        <div class="transition-delay-property">transition-delay: 1s;</div>
+        <h2>Transition + Transformation</h2>
+        <div class="transition-and-transformation">transition: width 2s, height 2s, transform 2s;</div>
+        <h2>Shorthand property transition</h2>
+        <div class="transition-property">transition: width 3s linear 1s;</div>
+    </body>
+</html>

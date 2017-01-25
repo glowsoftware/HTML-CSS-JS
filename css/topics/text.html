@@ -89,6 +89,27 @@
             .word-spacing-property-2 {
                 word-spacing: -5px;
             }
+
+            .bounded {
+                width: 250px;
+                border: 1px solid black;
+            }
+
+            .word-wrap-property-normal {
+                word-wrap: normal;
+            }
+
+            .word-wrap-property-break-word {
+                word-wrap: break-word;
+            }
+
+            .word-break-property-keep-all {
+                word-break: keep-all;
+            }
+
+            .word-break-property-break-all {
+                word-break: break-all;
+            }
         </style>
     </head>
     <body>
@@ -123,5 +144,12 @@
         <p><strong class="vertical-align-property">vertical-align: super;</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         <p class="word-spacing-property-1"><strong>word-spacing: 20px;</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         <p class="word-spacing-property-2"><strong>word-spacing: -5px;</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <h2>CSS3 Text</h2>
+        <p class="bounded word-wrap-property-normal"><strong>word-wrap: normal;</strong> 123412543756137567486165745613478573185187351</p>
+        <p class="bounded word-wrap-property-break-word"><strong>word-wrap: break-word;</strong> 123412543756137567486165745613478573185187351</p>
+        <p class="bounded word-break-property-keep-all"><strong>word-break: keep-all;</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+        <p class="bounded word-break-property-break-all"><strong>word-break: break-all;</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
     </body>
 </html>
