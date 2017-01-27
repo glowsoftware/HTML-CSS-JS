@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Animations</title>
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+
+            @keyframes animation-1 {
+                from {background-color: red;}
+                to {background-color: yellow;}
+            }
+
+            .animation-1 {
+                animation-name: animation-1;
+                animation-duration: 4s;
+            }
+
+            @keyframes animation-2 {
+                0%   {background-color: red;}
+                25%  {background-color: yellow;}
+                50%  {background-color: blue;}
+                100% {background-color: green;}
+            }
+
+            .animation-2 {
+                animation-name: animation-2;
+                animation-duration: 4s;
+            }
+
+            .animation-delay-property {
+                animation-name: animation-2;
+                animation-duration: 4s;
+                animation-delay: 1s;
+            }
+
+            .animation-iteration-count-property {
+                animation-name: animation-2;
+                animation-duration: 4s;
+                animation-iteration-count: 3;
+            }
+
+            .animation-iteration-count-infinite {
+                animation-name: animation-2;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes animated-positions {
+                0%   {left:0px; top:0px;}
+                25%  {left:200px; top:0px;}
+                50%  {left:200px; top:200px;}
+                75%  {left:0px; top:200px;}
+                100% {left:0px; top:0px;}
+            }
+
+            .animation-direction-reverse {
+                position: relative;
+                animation-name: animated-positions;
+                animation-duration: 4s;
+                animation-iteration-count: 3;
+                animation-direction: reverse;
+            }
+
+            .animation-direction-alternate {
+                position: relative;
+                animation-name: animated-positions;
+                animation-duration: 4s;
+                animation-iteration-count: 3;
+                animation-direction: alternate;
+            }
+
+            .animation-shorthand-property {
+                position: relative;
+                animation: animated-positions 4s 3;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Animations</h1>
+        <h2>The @keyframes Rule</h2>
+        <h3>@keyframes with 'from' and 'to'</h3>
+        <div class="animation-1"></div>
+        <h3>@keyframes with percents</h3>
+        <div class="animation-2"></div>
+        <h2>Delay an Animation</h2>
+        <div class="animation-delay-property "></div>
+        <h2>Set How Many Times an Animation Should Run</h2>
+        <h3>animation-iteration-count: 3</h3>
+        <div class="animation-iteration-count-property"></div>
+        <h3>animation-iteration-count: infinite</h3>
+        <div class="animation-iteration-count-infinite"></div>
+        <h2>Run Animation in Reverse Direction or Alternate Cycles</h2>
+        <h3>animation-direction: reverse;</h3>
+        <div class="animation-direction-reverse"></div>
+        <h3>animation-direction: alternate;</h3>
+        <div class="animation-direction-alternate"></div>
+        <h2>Animation Shorthand Property</h2>
+        <div class="animation-shorthand-property"></div>
+    </body>
+</html>
