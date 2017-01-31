@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Images</title>
+        <style>
+            .border-radius-property-1 {
+                border-radius: 16px;
+            }
+
+            .border-radius-property-2 {
+                border-radius: 50%;
+            }
+
+            .thumbnail {
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 5px;
+                width: 200px;
+            }
+
+            .container {
+                position: relative;
+                width: 300px;
+            }
+
+            .center {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 18px;
+            }
+
+            .background-for-text {
+                width: 100%;
+                height: auto;
+                opacity: 0.3;
+            }
+
+            table, th, td {
+               border: 1px solid black;
+               border-collapse: collapse;
+               padding: 10px;
+            }
+
+            .blur {
+                filter: blur(4px);
+            }
+
+            .brightness {
+                filter: brightness(250%);
+            }
+
+            .contrast {
+                filter: contrast(180%);
+            }
+
+            .grayscale {
+                filter: grayscale(100%);
+            }
+
+            .hue-rotate {
+                filter: hue-rotate(180deg);
+            }
+
+            .invert {
+                filter: invert(100%);
+            }
+
+            .saturate {
+                filter: saturate(7);
+            }
+
+            .sepia {
+                filter: sepia(100%);
+            }
+
+            td img {
+                width: 300px;
+            }
+
+            .overlay-container {
+                position: relative;
+                width: 50%;
+            }
+
+            .image {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: #008CBA;
+                overflow: hidden;
+                width: 0;
+                height: 100%;
+                transition: .5s ease;
+            }
+
+            .overlay-container:hover .overlay {
+                width: 100%;
+            }
+
+            .text {
+                white-space: nowrap;
+                color: white;
+                font-size: 20px;
+                position: absolute;
+                overflow: hidden;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Images</h1>
+        <h2>Rounded Images</h2>
+        <h3>border-radius: 16px;</h3>
+        <img class="border-radius-property-1" src="../../images/fjords.jpg"/>
+        <h3>border-radius: 50%;</h3>
+        <img class="border-radius-property-2" src="../../images/fjords.jpg"/>
+        <h2>Thumbnail Images</h2>
+        <img class="thumbnail" src="../../images/fjords.jpg"/>
+        <h2>Image Text</h2>
+        <div class="container">
+            <img class="background-for-text" src="../../images/fjords.jpg">
+            <div class="center">FJORDS</div>
+        </div>
+        <h2>Image Filters</h2>
+        <table>
+            <tr>
+                <td>
+                    original
+                </td>
+                <td>
+                    <img src="../../images/fjords.jpg"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    filter: blur(4px);
+                </td>
+                <td>
+                    <img class="blur" src="../../images/fjords.jpg"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    filter: brightness(250%);
+                </td>
+                <td>
+                    <img class="brightness" src="../../images/fjords.jpg"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    filter: contrast(180%);
+                </td>
+                <td>
+                    <img class="contrast" src="../../images/fjords.jpg"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    filter: grayscale(100%);
+                </td>
+                <td>
+                    <img class="grayscale" src="../../images/fjords.jpg"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    filter: hue-rotate(180deg);
+                </td>
+                <td>
+                    <img class="hue-rotate" src="../../images/fjords.jpg"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    filter: invert(100%);
+                </td>
+                <td>
+                    <img class="invert" src="../../images/fjords.jpg"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    filter: saturate(7);
+                </td>
+                <td>
+                    <img class="saturate" src="../../images/fjords.jpg"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    filter: sepia(100%);
+                </td>
+                <td>
+                    <img class="sepia" src="../../images/fjords.jpg"/>
+                </td>
+            </tr>
+        </table>
+        <h2>Slide in Overlay from the Left</h2>
+        <div class="overlay-container">
+            <img src="../../images/fjords.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Fjords</div>
+            </div>
+        </div>
+    </body>
+</html>
