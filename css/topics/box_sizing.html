@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Box Sizing</title>
+        <style>
+            .div1 {
+                width: 300px;
+                height: 100px;
+                border: 1px solid blue;
+            }
+
+            .div2 {
+                width: 300px;
+                height: 100px;
+                padding: 20px;
+                border: 1px solid red;
+            }
+
+            .box-sizing-property {
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Box Sizing</h1>
+        <p>The CSS3 box-sizing property allows us to include the padding and border in an element's total width and height.</p>
+        <h2>Without the CSS3 box-sizing Property</h2>
+        <div class="div1">width: 300px; height: 100px;</div>
+        <br>
+        <div class="div2">width: 300px; height: 100px; padding: 20px;</div>
+        <h2>With the CSS3 box-sizing Property</h2>
+        <div class="div1 box-sizing-property">width: 300px; height: 100px;</div>
+        <br>
+        <div class="div2 box-sizing-property">width: 300px; height: 100px; padding: 20px;</div>
+    </body>
+</html>
