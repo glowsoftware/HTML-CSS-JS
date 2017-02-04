@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Images and Videos</title>
+        <style>
+            .responsive-width {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Images and Videos</h1>
+        <h2>Using The max-width Property</h2>
+        <p>If the max-width property is set to 100%, the image or video will scale down if it has to, but never scale up
+            to be larger than its original size.</p>
+        <img class="responsive-width" src="../../images/mountains.jpg"/>
+        <br>
+        <video id="video" class="responsive-width" width="600px" controls>
+            <source src="../../media/bigbuckbunny.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <h2>HTML5 &lt;picture&gt; Element</h2>
+        <picture>
+            <source srcset="../../images/html5-small.png" media="(max-width: 500px)">
+            <source srcset="../../images/html5.png">
+            <img src="../../images/html5.png" alt="HTML5">
+        </picture>
+    </body>
+</html>

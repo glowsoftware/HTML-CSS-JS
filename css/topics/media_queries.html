@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Media Queries</title>
+        <style>
+            .wrapper {
+                overflow: auto;
+            }
+
+            #main {
+                margin-left: 4px;
+            }
+
+            #leftsidebar {
+                float: none;
+                width: auto;
+            }
+
+            #menulist {
+                margin: 0;
+                padding: 0;
+            }
+
+            .menuitem {
+                background: #CDF0F6;
+                border: 1px solid #d4d4d4;
+                border-radius: 4px;
+                list-style-type: none;
+                margin: 4px;
+                padding: 2px;
+            }
+
+            @media screen and (min-width: 480px) {
+                #leftsidebar {width: 200px; float: left;}
+                #main {margin-left: 216px;}
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            ul li a {
+                color: green;
+                text-decoration: none;
+                padding: 3px;
+                display: block;
+            }
+
+            @media screen and (max-width: 1000px) and (min-width: 700px) {
+                ul li a:before {
+                    content: "Email: ";
+                    font-style: italic;
+                    color: #666666;
+                }
+            }
+
+            @media screen and (min-width: 1001px) {
+                ul li a:after {
+                    content: " (" attr(data-email) ")";
+                    font-size: 12px;
+                    font-style: italic;
+                    color: #666666;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Media Queries</h1>
+        <div class="wrapper">
+            <div id="leftsidebar">
+                <ul id="menulist">
+                    <li class="menuitem">Menu-item 1</li>
+                    <li class="menuitem">Menu-item 2</li>
+                    <li class="menuitem">Menu-item 3</li>
+                    <li class="menuitem">Menu-item 4</li>
+                    <li class="menuitem">Menu-item 5</li>
+                </ul>
+            </div>
+            <div id="main">
+                <h1>Resize the browser window to see the effect!</h1>
+                <p>This example shows a menu that will float to the left of the page if the viewport is 480
+                    pixels wide or wider. If the viewport is less than 480 pixels, the menu will be on top of the content.</p>
+                <ul>
+                    <li><a data-email="johndoe@example.com" href="mailto:johndoe@example.com">John Doe</a></li>
+                    <li><a data-email="marymoe@example.com" href="mailto:marymoe@example.com">Mary Moe</a></li>
+                    <li><a data-email="amandapanda@example.com" href="mailto:amandapanda@example.com">Amanda Panda</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
