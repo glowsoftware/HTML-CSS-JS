@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Where To</title>
+        <script>
+            function functionFromHead() {
+                alert('Function from head');
+            }
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript in &lt;head&gt;</h1>
+        <button type="button" onclick="functionFromHead()">call function from head</button>
+        <h1>JavaScript in &lt;body&gt;</h1>
+        <button type="button" onclick="functionFromBody()">call function from body</button>
+        <p>Placing scripts at the bottom of the &lt;body&gt; element improves the display speed, because script compilation slows down the display.</p>
+        <h1>External JavaScript</h1>
+        <button type="button" onclick="functionFromExternalFile()">call function from external file</button>
+
+        <script>
+            function functionFromBody() {
+                alert('Function from body');
+            }
+        </script>
+        <script src="../app.js"></script>
+    </body>
+</html>
