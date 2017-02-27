@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Data Types</title>
+    </head>
+    <body>
+        <h1>Strings</h1>
+        var x = <span id="stringExample"></span>;
+        <h2>Numbers</h2>
+        var x = <span id="numberExample"></span>;
+        <h1>Booleans</h1>
+        var x = <span id="booleanExample"></span>;
+        <h1>Arrays</h1>
+        var x = [<span id="arrayExample"></span>];
+        <h1>Objects</h1>
+        var x = <span id="objectExample"></span>;
+        <h1>The typeof Operator</h1>
+        <p>typeof "John" -> <span id="typeOfString"></span></p>
+        <p>typeof 3.14 -> <span id="typeOfNumber"></span></p>
+        <p>typeof true -> <span id="typeOfBoolean"></span></p>
+        <p>typeof [1,2,3,4] -> <span id="typeOfArray"></span></p>
+        <p>typeof {name:'John', age:34} -> <span id="typeOfObject"></span></p>
+        <h1>Difference Between Undefined and Null</h1>
+        <p>typeof undefined  -> undefined</p>
+        <p>typeof null -> object</p>
+        <p>null === undefined -> false</p>
+        <p>null == undefined -> true</p>
+        <script>
+            document.getElementById("stringExample").innerHTML = "\"This is string\"";
+            document.getElementById("numberExample").innerHTML = 2.1;
+            document.getElementById("booleanExample").innerHTML = true;
+            document.getElementById("arrayExample").innerHTML = ["\"Saab\"", "\"Volvo\"", "\"BMW\""];
+            document.getElementById("objectExample").innerHTML = JSON.stringify({firstName:"John", lastName:"Doe", age:50});
+            document.getElementById("typeOfString").innerHTML = typeof "John";
+            document.getElementById("typeOfNumber").innerHTML =  typeof 3.14;
+            document.getElementById("typeOfBoolean").innerHTML = typeof true;
+            document.getElementById("typeOfArray").innerHTML = typeof [1,2,3,4];
+            document.getElementById("typeOfObject").innerHTML = typeof {name:'John', age:34};
+        </script>
+    </body>
+</html>
